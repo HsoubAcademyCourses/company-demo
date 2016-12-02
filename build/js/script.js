@@ -1,14 +1,8 @@
-$( document ).ready(function() {
-    $("[rel='tooltip']").tooltip();    
- 
-    $('.thumbnail2').hover(
+$(document).ready(function(){
+    $('.project-thumbnail').hover(
         function(){
-            $(this).find('.caption2').slideDown(250); //.fadeIn(250)
-            $(this).find('.project-category').hide(); 
-        },
-        function(){
-            $(this).find('.caption2').slideUp(250); //.fadeOut(205)
-            $(this).find('.project-category').show();
+            $(this).find('.project-thumbnail-overlay').toggle("slide");
+            $(this).find('.project-category').toggle("slide");
         }
-    ); 
+    )
 });
